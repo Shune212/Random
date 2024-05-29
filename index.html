@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h4>Change string to Random Character</h4>
+        <div class="random">
+            <input type="text" id="txt">
+            <button  id="btn">Click</button>
+        </div><br>
+        <div class="result" id="result"></div>
+
+    <script>
+        var input=document.querySelector("#txt");
+var btn=document.querySelector("#btn");
+var result=document.querySelector("#result");
+
+btn.addEventListener("click",()=>{
+    var inputlength = input.value.length;
+    var ran = input.value.charAt(Math.floor(Math.random()*inputlength+1));
+    result.innerText=ran.toUpperCase();
+});
+    </script>
+</body>
+
+</html>
